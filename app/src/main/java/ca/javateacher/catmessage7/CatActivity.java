@@ -1,11 +1,9 @@
 package ca.javateacher.catmessage7;
 
 import android.content.Intent;
-import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 public abstract class CatActivity extends AppCompatActivity {
