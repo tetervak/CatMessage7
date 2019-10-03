@@ -55,8 +55,4 @@
         android:layout_height="0dp"
         android:layout_weight="2" />
 
-    <TextView
-        android:id="@+id/sheridan"
-        android:text="@string/sheridan"
-        style="@style/sheridan_label" />
 </LinearLayout>

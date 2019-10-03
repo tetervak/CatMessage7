@@ -34,7 +34,8 @@ public class MainActivity extends CatActivity {
         sendButton.setOnClickListener(v -> showOutput());
 
         // lookup the preferences object
-        mPreferences = PreferenceManager.getDefaultSharedPreferences(this);
+        mPreferences =
+                PreferenceManager.getDefaultSharedPreferences(this);
     }
 
     private void showOutput() {
