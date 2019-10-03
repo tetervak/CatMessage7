@@ -65,9 +65,12 @@ public class MainActivity extends CatActivity {
     @Override
     protected void onResume() {
         super.onResume();
-        boolean urgent = mPreferences.getBoolean("urgent", false);
+        boolean urgent = mPreferences.getBoolean(getString(R.string.urgent_key), false);
         mUrgentCheckBox.setChecked(urgent);
-        String message = mPreferences.getString("message_text","purr");
+        String message
+                = mPreferences.getString(getString(R.string.message_text_key),
+                getString(R.string.default_message_value));
+        assert message != null;
         switch(message){
             case "purr":{
                 mMessageGroup.check(R.id.purr_button);

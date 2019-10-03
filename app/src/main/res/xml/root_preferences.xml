@@ -3,17 +3,17 @@
     <PreferenceCategory app:title="@string/default_message_title">
 
         <SwitchPreferenceCompat
-            app:key="urgent"
+            app:key="@string/urgent_key"
             app:summaryOff="@string/not_urgent"
             app:summaryOn="@string/urgent"
             app:defaultValue="false"
             app:title="@string/delivery_speed" />
 
         <ListPreference
-            app:defaultValue="purr"
+            app:defaultValue="@string/default_message_value"
             app:entries="@array/message_text_entries"
             app:entryValues="@array/message_text_values"
-            app:key="message_text"
+            app:key="@string/message_text_key"
             app:title="@string/message_text"
             app:useSimpleSummaryProvider="true" />
 
