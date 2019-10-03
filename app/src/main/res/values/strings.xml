@@ -1,0 +1,56 @@
+<resources>
+    <string name="app_name">Cat Message 7</string>
+
+    <string name="settings">Settings</string>
+
+    <!-- about dialog -->
+    <string name="about">About</string>
+    <string name="author">Alex Tetervak, Sheridan College, 2019</string>
+
+    <string name="title_activity_output">Output Activity</string>
+
+    <!-- radio button labels / output strings -->
+    <string name="cat_purr">Purr</string>
+    <string name="cat_mew">Mew</string>
+    <string name="cat_hiss">Hiss</string>
+
+    <!-- urgent / not urgent -->
+    <string name="urgent">Urgent</string>
+    <string name="not_urgent">Not Urgent</string>
+
+    <string name="select_message">Select a message</string>
+    <string name="message_label">Received message</string>
+    <string name="undefined">Undefined</string>
+
+    <!-- the button labels -->
+    <string name="send">Send</string>
+    <string name="close">Close</string>
+
+    <!-- the activity labels -->
+    <string name="main_activity">Main Activity</string>
+    <string name="output_activity">Output Activity</string>
+
+    <!-- the floating label -->
+    <string name="sheridan">Sheridan, 2019</string>
+    <string name="title_activity_settings">Settings</string>
+
+    <!-- Preference Titles -->
+    <string name="messages_header">Messages</string>
+    <string name="sync_header">Sync</string>
+
+    <!-- Messages Preferences -->
+    <string name="signature_title">Your signature</string>
+    <string name="reply_title">Default reply action</string>
+
+    <!-- Sync Preferences -->
+    <string name="sync_title">Sync email periodically</string>
+    <string name="attachment_title">Download incoming attachments</string>
+    <string name="attachment_summary_on">Automatically download attachments for incoming emails
+    </string>
+    <string name="attachment_summary_off">Only download attachments when manually requested</string>
+    <string name="message_text">Message Text</string>
+    <string name="delivery_speed">Delivery Speed</string>
+    <string name="default_message_title">Default Message</string>
+
+
+</resources>
