@@ -33,7 +33,11 @@
             android:name=".OutputActivity"
             android:label="@string/title_activity_output"
             android:parentActivityName=".MainActivity"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBar" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="ca.javateacher.catmessage7.MainActivity" />
+        </activity>
     </application>
 
 </manifest>
