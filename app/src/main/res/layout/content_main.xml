@@ -66,12 +66,29 @@
 
     </RadioGroup>
 
-    <Button
-        android:id="@+id/send_button"
+    <LinearLayout
+        style="?android:attr/buttonBarStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/gap2"
-        android:text="@string/send" />
+        android:layout_marginTop="@dimen/gap1"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/reset_button"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/reset" />
+
+        <Button
+            android:id="@+id/send_button"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/gap0"
+            android:text="@string/send"
+            tools:ignore="RtlHardcoded" />
+    </LinearLayout>
 
     <Space
         android:layout_width="match_parent"

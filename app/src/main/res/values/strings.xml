@@ -41,5 +41,6 @@
     <string name="urgent_key">urgent</string>
     <string name="message_text_key">message_text</string>
     <string name="default_message_value">purr</string>
+    <string name="reset">Reset</string>
 
 </resources>

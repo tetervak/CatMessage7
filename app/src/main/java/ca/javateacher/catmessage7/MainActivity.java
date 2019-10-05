@@ -29,16 +29,44 @@ public class MainActivity extends CatActivity {
         mUrgentCheckBox = findViewById(R.id.urgent_check_box);
         mMessageGroup = findViewById(R.id.message_group);
 
-        // make the button work
+        // make the buttons work
+        Button resetButton = findViewById(R.id.reset_button);
+        resetButton.setOnClickListener(v -> reset());
         Button sendButton = findViewById(R.id.send_button);
-        sendButton.setOnClickListener(v -> showOutput());
+        sendButton.setOnClickListener(v -> send());
 
         // lookup the preferences object
         mPreferences =
                 PreferenceManager.getDefaultSharedPreferences(this);
+
+        // reset the inputs to the defaults from the settings
+        reset();
     }
 
-    private void showOutput() {
+    private void reset(){
+      boolean urgent = mPreferences.getBoolean(getString(R.string.urgent_key), false);
+      mUrgentCheckBox.setChecked(urgent);
+      String message
+          = mPreferences.getString(getString(R.string.message_text_key),
+          getString(R.string.default_message_value));
+      assert message != null;
+      switch(message){
+        case "purr":{
+          mMessageGroup.check(R.id.purr_button);
+          break;
+        }
+        case "mew":{
+          mMessageGroup.check(R.id.mew_button);
+          break;
+        }
+        case "hiss":{
+          mMessageGroup.check(R.id.hiss_button);
+          break;
+        }
+      }
+    }
+
+    private void send() {
         // get urgent flag value
         boolean urgent = mUrgentCheckBox.isChecked();
         // get the selected message text
@@ -61,30 +89,5 @@ public class MainActivity extends CatActivity {
         intent.putExtra(IS_URGENT_KEY, urgent);
         intent.putExtra(MESSAGE_TEXT_KEY, message);
         startActivity(intent);
-    }
-
-    @Override
-    protected void onResume() {
-        super.onResume();
-        boolean urgent = mPreferences.getBoolean(getString(R.string.urgent_key), false);
-        mUrgentCheckBox.setChecked(urgent);
-        String message
-                = mPreferences.getString(getString(R.string.message_text_key),
-                getString(R.string.default_message_value));
-        assert message != null;
-        switch(message){
-            case "purr":{
-                mMessageGroup.check(R.id.purr_button);
-                break;
-            }
-            case "mew":{
-                mMessageGroup.check(R.id.mew_button);
-                break;
-            }
-            case "hiss":{
-                mMessageGroup.check(R.id.hiss_button);
-                break;
-            }
-        }
     }
 }
