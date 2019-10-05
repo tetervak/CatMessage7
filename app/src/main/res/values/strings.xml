@@ -23,6 +23,7 @@
     <string name="undefined">Undefined</string>
 
     <!-- the button labels -->
+    <string name="reset">Reset</string>
     <string name="send">Send</string>
     <string name="close">Close</string>
 
@@ -41,6 +42,6 @@
     <string name="urgent_key">urgent</string>
     <string name="message_text_key">message_text</string>
     <string name="default_message_value">purr</string>
-    <string name="reset">Reset</string>
+
 
 </resources>
